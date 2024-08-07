@@ -15,11 +15,14 @@ body {
   justify-content: center;
 }
 
+/* Largest flex container */
 .modal {
+  display: flex;
   background: white;
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 10px;
 }
 
 .icon {
@@ -33,6 +36,50 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+/* header + body text + continue/cancel buttons */
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0px 0px 10px 10px;
+}
+
+.header {
+  font-size: larger;
+  font-weight: bolder;
+  margin: 0px 0px 10px 0px;
+}
+
+/* continue/cancel/close */
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* continue/cancel */
+.bottom-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 10px 0px 0px 0px;
+}
+
+button.continue {
+  background: royalblue;
+  border: 1px solid royalblue;
+  color: white;
+}
+
+button.cancel {
+  background: white;
+  border: 1px solid #ddd;
+  color: royalblue;
 }
 
 .close-button {
@@ -48,22 +95,4 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
-}
-
-button {
-  cursor: pointer;
-  padding: 8px 16px;
-  border-radius: 8px;
-}
-
-button.continue {
-  background: royalblue;
-  border: 1px solid royalblue;
-  color: white;
-}
-
-button.cancel {
-  background: white;
-  border: 1px solid #ddd;
-  color: royalblue;
 }
